@@ -1,0 +1,13 @@
+nav {
+    text-align: center;
+    align-self: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    &:hover {
+        color: #90d7ff;
+    }
+}
