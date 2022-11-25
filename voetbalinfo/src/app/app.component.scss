@@ -1,0 +1,40 @@
+$colorNavFoot: #454545;
+$navTextColor: white;
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(7, 15vh);
+    grid-template-areas: 
+    "logo navigatie navigatie navigatie navigatie navigatie"
+    ". . con con . ."
+    ". . con con . ."
+    ". . con con . ."
+    ". . con con . ."
+    ". . con con . ."
+    "footer footer footer footer footer footer";
+}
+
+.navigatie {
+    grid-area: navigatie;
+    background-color: $colorNavFoot;
+    color: $navTextColor;
+}
+
+.content {
+    grid-area: con;
+    background-color: azure;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: $colorNavFoot;
+    text-align: center;
+   img {
+    width: 100px;
+   }
+}
+footer {
+    grid-area: footer;
+    background-color: $colorNavFoot;
+}
