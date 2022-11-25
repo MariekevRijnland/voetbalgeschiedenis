@@ -1,1 +1,27 @@
-<p>spelers works!</p>
+<div class="container mt-5">
+
+    <h2>Speler informatie</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Naam</th>
+                <th>Land</th>
+                <th>Nummer</th>
+                <th>Ronde</th>
+                <th>Match</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userInfo">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.country }}</td>
+                <td>{{ user.number }}</td>
+                <td>{{ user.roundid }}</td>
+                <td>{{ user.matchid }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

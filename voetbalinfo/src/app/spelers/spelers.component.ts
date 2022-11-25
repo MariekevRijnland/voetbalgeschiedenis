@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spelers.component.scss']
 })
 export class SpelersComponent implements OnInit {
+  public userInfo: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    const url: string = '/assets/data.json';
+    this.http.get(url).subscribe((response) => {
+      this.userInfo = response;
+    });
   }
-
 }
