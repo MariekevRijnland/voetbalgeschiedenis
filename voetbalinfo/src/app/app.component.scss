@@ -17,10 +17,17 @@ $navTextColor: white;
 
 .navigatie {
     grid-area: navigatie;
-    background-color: $colorNavFoot;
     color: $navTextColor;
+    align-self: center;
 }
-
+.nav {
+    grid-area: navigatie;
+    background-color: $colorNavFoot;
+}
+.log {
+    grid-area: logo;
+    background-color: $colorNavFoot;
+}
 .content {
     grid-area: con;
     background-color: azure;
@@ -28,8 +35,8 @@ $navTextColor: white;
 
 .logo {
     grid-area: logo;
-    background-color: $colorNavFoot;
     text-align: center;
+    align-self: center;
    img {
     width: 100px;
    }
