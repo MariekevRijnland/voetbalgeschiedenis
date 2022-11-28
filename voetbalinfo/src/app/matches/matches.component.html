@@ -1,1 +1,34 @@
-<p>matches works!</p>
+<div class="container mt-5">
+
+    <h2>Match info</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Jaar</th>
+                <th>Plaats</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Home team goals</th>
+                <th>Away team goals</th>
+                <th>Ronde</th>
+                <th>Match</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let match of matchInfo">
+                <td>{{ match.id }}</td>
+                <td>{{ match.year }}</td>
+                <td>{{ match.City }}</td>
+                <td>{{ match.number }}</td>
+                <td>{{ match.Home_Team_Name }}</td>
+                <td>{{ match.Away_Team_Name }}</td>
+                <td>{{ match.Home_Team_Goals }}</td>
+                <td>{{ match.Away_Team_Goals }}</td>
+                <td>{{ match.roundid }}</td>
+                <td>{{ match.matchid }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

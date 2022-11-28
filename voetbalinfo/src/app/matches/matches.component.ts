@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent implements OnInit {
+  public matchInfo: any;
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    const url: string = '/assets/matchdata.json';
+    this.http.get(url).subscribe((response) => {
+      this.matchInfo = response;
+    });
   }
 
 }
