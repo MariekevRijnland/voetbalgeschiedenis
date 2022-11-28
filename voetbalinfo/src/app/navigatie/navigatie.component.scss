@@ -1,7 +1,3 @@
-nav {
-    text-align: center;
-    align-self: center;
-}
 
 nav a {
     text-decoration: none;
@@ -11,3 +7,12 @@ nav a {
         color: #90d7ff;
     }
 }
+
+nav ul {
+    list-style: none;
+    text-align: center;
+ }
+ 
+ nav ul li {
+    display: inline-block;
+ }

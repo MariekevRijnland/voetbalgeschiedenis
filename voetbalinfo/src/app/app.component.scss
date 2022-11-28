@@ -4,7 +4,8 @@ $navTextColor: white;
 .main {
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(7, 15vh);
+    grid-template-rows: 
+    8vh 17vh 17vh 17vh 17vh 17vh 7vh;
     grid-template-areas: 
     "logo navigatie navigatie navigatie navigatie navigatie"
     ". con con con con ."
@@ -17,10 +18,17 @@ $navTextColor: white;
 
 .navigatie {
     grid-area: navigatie;
-    background-color: $colorNavFoot;
     color: $navTextColor;
+    align-self: center;
 }
-
+.nav {
+    grid-area: navigatie;
+    background-color: $colorNavFoot;
+}
+.log {
+    grid-area: logo;
+    background-color: $colorNavFoot;
+}
 .content {
     grid-area: con;
     background-color: azure;
@@ -28,13 +36,14 @@ $navTextColor: white;
 
 .logo {
     grid-area: logo;
-    background-color: $colorNavFoot;
     text-align: center;
+    align-self: center;
    img {
-    width: 100px;
+    width: 50px;
    }
 }
 footer {
     grid-area: footer;
     background-color: $colorNavFoot;
+    align-content: flex-end;
 }
