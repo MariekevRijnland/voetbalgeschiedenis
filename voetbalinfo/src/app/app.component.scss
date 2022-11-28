@@ -4,7 +4,8 @@ $navTextColor: white;
 .main {
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(7, 15vh);
+    grid-template-rows: 
+    8vh 17vh 17vh 17vh 17vh 17vh 7vh;
     grid-template-areas: 
     "logo navigatie navigatie navigatie navigatie navigatie"
     ". con con con con ."
@@ -38,10 +39,11 @@ $navTextColor: white;
     text-align: center;
     align-self: center;
    img {
-    width: 100px;
+    width: 50px;
    }
 }
 footer {
     grid-area: footer;
     background-color: $colorNavFoot;
+    align-content: flex-end;
 }
