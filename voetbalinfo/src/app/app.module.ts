@@ -11,7 +11,8 @@ import { TeamsComponent } from './teams/teams.component';
 import { SpelersComponent } from './spelers/spelers.component';
 import { MatchesComponent } from './matches/matches.component';
 import { NavigatieComponent } from './navigatie/navigatie.component';
-
+import { JarenComponent } from './jaren/jaren.component';
+import { HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { NavigatieComponent } from './navigatie/navigatie.component';
     TeamsComponent,
     SpelersComponent,
     MatchesComponent,
-    NavigatieComponent
+    NavigatieComponent,
+    JarenComponent
   ],
   imports: [
     BrowserModule,

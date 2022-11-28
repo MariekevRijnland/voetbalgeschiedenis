@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { MatchesComponent } from './matches/matches.component';
 import { SpelersComponent } from './spelers/spelers.component';
 import { TeamsComponent } from './teams/teams.component';
-
+import { JarenComponent } from './jaren/jaren.component';
 const routes: Routes = [
   {
     path: '',
@@ -17,6 +17,9 @@ const routes: Routes = [
   {
     path: 'matches',
     component: MatchesComponent
+  }, {
+    path: 'jaren',
+    component: JarenComponent
   },
   {
     path: 'spelers',
