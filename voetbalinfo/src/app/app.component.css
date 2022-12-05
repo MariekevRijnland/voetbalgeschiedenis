@@ -38,6 +38,8 @@
 
 footer {
   grid-area: footer;
+  display: flex;
   background-color: #454545;
   align-content: flex-end;
+  justify-content: end;
 }
