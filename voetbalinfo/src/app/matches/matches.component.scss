@@ -1,21 +1,23 @@
 .matches-table {
-    padding: 30px;
+    padding: 40px;
+    margin: 10px;
 }
 
 .matches-table h1 {
     text-align: center;
     margin-top: 2vh;
-    font-size: larger;
+    font-size: 50px;
 }
 
 .table {
+    font-size: 20px;
     width: 100%;
     border-collapse: collapse;
 }
 
 td,
 th {
-    border: 1px solid #dddddd;
+    border: 1px solid #00000093;
     text-align: left;
     padding: 8px;
 }
@@ -24,6 +26,6 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-.link {
+table a {
     text-decoration: none;
 }
