@@ -1,0 +1,43 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 8vh 17vh 17vh 17vh 17vh 17vh 7vh;
+  grid-template-areas: "logo navigatie navigatie navigatie navigatie navigatie" ". con con con con ." ". con con con con ." ". con con con con ." ". con con con con ." ". con con con con ." "footer footer footer footer footer footer";
+}
+
+.navigatie {
+  grid-area: navigatie;
+  color: white;
+  align-self: center;
+}
+
+.nav {
+  grid-area: navigatie;
+  background-color: #454545;
+}
+
+.log {
+  grid-area: logo;
+  background-color: #454545;
+}
+
+.content {
+  grid-area: con;
+  background-color: azure;
+}
+
+.logo {
+  grid-area: logo;
+  text-align: center;
+  align-self: center;
+}
+
+.logo img {
+  width: 50px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #454545;
+  align-content: flex-end;
+}

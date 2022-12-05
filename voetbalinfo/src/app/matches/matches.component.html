@@ -1,34 +1,30 @@
-<div class="container mt-5">
-
-    <h2>Match info</h2>
-
-    <table class="table table-striped">
-        <thead>
+<section class="matches-table">
+    <h1>Jaren</h1>
+    <br>
+    <table class="table">
+        <thead class="matches-kopjes">
             <tr>
-                <th>Id</th>
-                <th>Jaar</th>
-                <th>Plaats</th>
-                <th>Home Team</th>
-                <th>Away Team</th>
-                <th>Home team goals</th>
-                <th>Away team goals</th>
-                <th>Ronde</th>
-                <th>Match</th>
+                <th scope="col">Jaar</th>
+                <th scope="col">Plaats</th>
+                <th scope="col">Home Team</th>
+                <th scope="col">Away Team</th>
             </tr>
         </thead>
-        <tbody>
-            <tr *ngFor="let match of matchInfo">
-                <td>{{ match.id }}</td>
-                <td>{{ match.year }}</td>
-                <td>{{ match.City }}</td>
-                <td>{{ match.number }}</td>
-                <td>{{ match.Home_Team_Name }}</td>
-                <td>{{ match.Away_Team_Name }}</td>
-                <td>{{ match.Home_Team_Goals }}</td>
-                <td>{{ match.Away_Team_Goals }}</td>
-                <td>{{ match.roundid }}</td>
-                <td>{{ match.matchid }}</td>
+        <tbody *ngFor="let match of matches">
+            <tr>
+                <th scope="row">
+                    <a class="link" href="">{{match.year}}</a>
+                </th>
+                <th scope="row">
+                    <a class="link" href="">{{match.City}}</a>
+                </th>
+                <th scope="row">
+                    <a class="link" href="">{{match.Home_Team_Name}}</a>
+                </th>
+                <th scope="row">
+                    <a class="link" href="">{{match.Away_Team_Name}}</a>
+                </th>
             </tr>
         </tbody>
     </table>
-</div>
+</section>

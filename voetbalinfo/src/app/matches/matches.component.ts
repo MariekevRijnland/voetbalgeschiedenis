@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../json.service';
 
 @Component({
   selector: 'app-matches',
@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent implements OnInit {
-  public matchInfo: any;
-  constructor(private http: HttpClient) { }
+  
+  matches:any;
+  constructor(private json: JsonService) { }
 
-  public ngOnInit(): void {
-    const url: string = '/assets/matchdata.json';
-    this.http.get(url).subscribe((response) => {
-      this.matchInfo = response;
-    });
+  ngOnInit(): void {
+    this.json.getmatches().subscribe(json => this.matches = json)
   }
 
 }

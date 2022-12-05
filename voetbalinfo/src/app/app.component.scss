@@ -1,19 +1,10 @@
 $colorNavFoot: #454545;
 $navTextColor: white;
-
 .main {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 
-    8vh 17vh 17vh 17vh 17vh 17vh 7vh;
-    grid-template-areas: 
-    "logo navigatie navigatie navigatie navigatie navigatie"
-    ". con con con con ."
-    ". con con con con ."
-    ". con con con con ."
-    ". con con con con ."
-    ". con con con con ."
-    "footer footer footer footer footer footer";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 8vh 17vh 17vh 17vh 17vh 17vh 7vh;
+    grid-template-areas: "logo navigatie navigatie navigatie navigatie navigatie" ". con con con con ." ". con con con con ." ". con con con con ." ". con con con con ." ". con con con con ." "footer footer footer footer footer footer";
 }
 
 .navigatie {
@@ -21,28 +12,31 @@ $navTextColor: white;
     color: $navTextColor;
     align-self: center;
 }
+
 .nav {
     grid-area: navigatie;
     background-color: $colorNavFoot;
 }
+
 .log {
     grid-area: logo;
     background-color: $colorNavFoot;
 }
+
 .content {
     grid-area: con;
     background-color: azure;
-    // opacity: 50%;
 }
 
 .logo {
     grid-area: logo;
     text-align: center;
     align-self: center;
-   img {
-    width: 50px;
-   }
+    img {
+        width: 50px;
+    }
 }
+
 footer {
     grid-area: footer;
     background-color: $colorNavFoot;

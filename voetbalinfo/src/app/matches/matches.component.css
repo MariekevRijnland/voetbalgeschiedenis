@@ -1,0 +1,29 @@
+.matches-table {
+  padding: 30px;
+}
+
+.matches-table h1 {
+  text-align: center;
+  margin-top: 2vh;
+  font-size: larger;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.link {
+  text-decoration: none;
+}

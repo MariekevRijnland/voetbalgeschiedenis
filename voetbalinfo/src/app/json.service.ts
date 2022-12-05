@@ -9,4 +9,7 @@ export class JsonService {
   getyears(){
     return this.http.get('https://k0497.azurewebsites.net/api/years/getallyears');
   }
+  getmatches(){
+    return this.http.get('https://k0497.azurewebsites.net/api/matches/getallmatches');
+  }
 }
