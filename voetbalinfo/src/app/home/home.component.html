@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="container mt-5">
+<h1>Laatste match</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Jaar</th>
+            <th>Land</th>
+            <th>Winnaar</th>
+            <th>Tweede</th>
+            <th>Derde</th>
+            <th>Vierde</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let jaar of jaren">
+            <td>{{ jaar.year }}</td>
+            <td>{{ jaar.Country }}</td>
+            <td>{{ jaar.Winner }}</td>
+            <td>{{ jaar.Runners_Up }}</td>
+            <td>{{ jaar.Third }}</td>
+            <td>{{ jaar.Fourth }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
