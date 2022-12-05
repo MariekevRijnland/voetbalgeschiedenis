@@ -1,27 +1,34 @@
-<div class="container mt-5">
-
-    <h2>Speler informatie</h2>
-
-    <table class="table table-striped">
-        <thead>
+<section class="players-table">
+    <h1>Alle spelers</h1>
+    <br>
+    <table class="table">
+        <thead class="players-kopjes">
             <tr>
-                <th>Id</th>
-                <th>Naam</th>
-                <th>Land</th>
-                <th>Nummer</th>
-                <th>Ronde</th>
-                <th>Match</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Naam</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Land</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Nummer</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Ronde</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Match</th>
             </tr>
         </thead>
-        <tbody>
-            <tr *ngFor="let user of userInfo">
-                <td>{{ user.id }}</td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.country }}</td>
-                <td>{{ user.number }}</td>
-                <td>{{ user.roundid }}</td>
-                <td>{{ user.matchid }}</td>
+        <tbody *ngFor="let player of players">
+            <tr>
+                <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
+                    <a class="link" href="">{{player.name}}</a>
+                </th>
+                <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
+                    <a class="link" href="">{{player.country}}</a>
+                </th>
+                <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
+                    <a class="link" href="">{{player.number}}</a>
+                </th>
+                <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
+                    <a class="link" href="">{{player.roundid}}</a>
+                </th>
+                <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
+                    <a class="link" href="">{{player.matchid}}</a>
+                </th>
             </tr>
         </tbody>
     </table>
-</div>
+</section>

@@ -1,0 +1,31 @@
+.players-table {
+    padding: 40px;
+    margin: 10px;
+}
+
+.players-table h1 {
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 40px;
+}
+
+.table {
+    font-size: 15px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #00000093;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+table a {
+    text-decoration: none;
+}

@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../json.service';
 
 @Component({
   selector: 'app-spelers',
@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spelers.component.scss']
 })
 export class SpelersComponent implements OnInit {
-  public userInfo: any;
-
-  constructor(private http: HttpClient) { }
-
-  public ngOnInit(): void {
-    const url: string = '/assets/data.json';
-    this.http.get(url).subscribe((response) => {
-      this.userInfo = response;
-    });
+  players:any;
+  constructor(private json: JsonService) { }
+  ngOnInit(): void {
+      // Haalt alle jaren op die in de json query staan
+    this.json.getPlayers().subscribe(json => this.players = json)
   }
 }
