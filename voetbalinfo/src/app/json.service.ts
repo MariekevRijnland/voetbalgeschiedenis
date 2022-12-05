@@ -13,4 +13,7 @@ export class JsonService {
   getmatches(){
     return this.http.get('https://k0497.azurewebsites.net/api/matches/getallmatches');
   }
+  getPlayers(){
+    return this.http.get('https://k0497.azurewebsites.net/api/players/getallplayers');
+  }
 }
