@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 export class JsonService {
 
   constructor(private http:HttpClient) {}
-  getyears(){
+  getYears(){
+    // Haalt alle data op uit de query/link
     return this.http.get('https://k0497.azurewebsites.net/api/years/getallyears');
   }
   getmatches(){

@@ -11,9 +11,9 @@ export class JarenComponent implements OnInit {
   
   jaren:any;
   constructor(private json: JsonService) { }
-
   ngOnInit(): void {
-    this.json.getyears().subscribe(json => this.jaren = json)
+      // Haalt alle jaren op die in de json query staan
+    this.json.getYears().subscribe(json => this.jaren = json)
   }
 
 }

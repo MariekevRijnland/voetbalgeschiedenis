@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonService } from '../json.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  jaren:any;
 
+  constructor(private json: JsonService) { }
   ngOnInit(): void {
+      // Haalt alle jaren op die in de json query staan
+    this.json.getYears().subscribe(json => this.jaren = json)
   }
 
 }
