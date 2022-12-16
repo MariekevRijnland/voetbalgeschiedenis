@@ -26,6 +26,8 @@ $navTextColor: white;
 .content {
     grid-area: con;
     background-color: azure;
+    height: fit-content;
+    padding-bottom: 50px;
 }
 
 .logo {
@@ -39,8 +41,6 @@ $navTextColor: white;
 
 footer {
     grid-area: footer;
-    display: flex;
     background-color: $colorNavFoot;
-    align-content: flex-end;
-    justify-content: end;
+    bottom: auto;
 }

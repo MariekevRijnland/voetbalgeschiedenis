@@ -1,32 +1,32 @@
 <section class="players-table">
-    <h1>Alle spelers</h1>
+    <h1>Alle spelers van de match  </h1>
     <br>
     <table class="table">
         <thead class="players-kopjes">
             <tr>
+                <th style="background: rgb(186, 185, 189);" scope="col">Match</th>
                 <th style="background: rgb(186, 185, 189);" scope="col">Naam</th>
                 <th style="background: rgb(186, 185, 189);" scope="col">Land</th>
                 <th style="background: rgb(186, 185, 189);" scope="col">Nummer</th>
                 <th style="background: rgb(186, 185, 189);" scope="col">Ronde</th>
-                <th style="background: rgb(186, 185, 189);" scope="col">Match</th>
             </tr>
         </thead>
-        <tbody *ngFor="let player of players">
+        <tbody  *ngFor="let speler of spelers">
             <tr>
                 <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
-                    <a class="link" href="">{{player.name}}</a>
-                </th>
-                <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
-                    <a class="link" href="">{{player.country}}</a>
+                    <a class="link">{{speler.matchid}}</a>
                 </th>
                 <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
-                    <a class="link" href="">{{player.number}}</a>
+                    <a class="link">{{speler.name}}</a>
                 </th>
                 <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
-                    <a class="link" href="">{{player.roundid}}</a>
+                    <a class="link">{{speler.country}}</a>
                 </th>
                 <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
-                    <a class="link" href="">{{player.matchid}}</a>
+                    <a class="link">{{speler.number}}</a>
+                </th>
+                <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
+                    <a class="link">{{speler.roundid}}</a>
                 </th>
             </tr>
         </tbody>

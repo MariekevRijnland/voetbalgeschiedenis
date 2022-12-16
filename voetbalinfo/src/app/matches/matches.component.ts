@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { PostService } from '../post.service';
+
+import { JsonService } from '../json.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-matches',
@@ -8,7 +13,9 @@ import { PostService } from '../post.service';
 })
 export class MatchesComponent implements OnInit {
   
+  year:any;
   matches:any;
+
   PostService: any;
   constructor(private json: PostService) { }
 
@@ -41,6 +48,14 @@ export class MatchesComponent implements OnInit {
     this.tableSize = event.target.value;
     this.page = 1;
     this.fetchPosts();
+
+ 
+  constructor(private json: JsonService, private route:ActivatedRoute) { 
+    this.route.params.subscribe(params => this.year = params['year']);
+  }
+  ngOnInit(): void {
+    this.json. getMatchesByYear(this.year).subscribe(json => this.matches = json)
+
   }
 
 }
