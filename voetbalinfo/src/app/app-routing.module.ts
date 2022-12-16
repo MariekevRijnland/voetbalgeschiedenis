@@ -15,16 +15,19 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'matches',
+    component: MatchesComponent
+  }, {
     path: 'jaren',
     component: JarenComponent
   },
   {
-    path: 'matches/:year',
-    component: MatchesComponent
+    path: 'spelers',
+    component: SpelersComponent
   },
   {
-    path: 'spelers/:matchid',
-    component: SpelersComponent
+    path: 'teams',
+    component: TeamsComponent
   }
 ];
 

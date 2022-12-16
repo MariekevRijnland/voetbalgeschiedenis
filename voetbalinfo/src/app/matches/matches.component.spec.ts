@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { MatchesComponent } from './matches.component';
 
 describe('MatchesComponent', () => {
@@ -20,4 +21,3 @@ describe('MatchesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

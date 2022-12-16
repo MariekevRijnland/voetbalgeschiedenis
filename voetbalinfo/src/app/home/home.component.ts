@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { JsonService } from '../json.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  jaar:any;
+  jaren:any;
 
-  constructor(private json: JsonService, private route:ActivatedRoute) { 
-    this.route.params.subscribe(params => this.jaar = params['year']);
-  }
+  constructor(private json: JsonService) { }
   ngOnInit(): void {
       // Haalt alle jaren op die in de json query staan
-    this.json.getYears().subscribe(json => this.jaar = json);
-    
+    this.json.getYears().subscribe(json => this.jaren = json)
   }
 
 }

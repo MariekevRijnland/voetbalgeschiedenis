@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
-import { PostService } from '../post.service';
-
+<<<<<<< HEAD
 import { JsonService } from '../json.service';
 import { ActivatedRoute } from '@angular/router';
-
+=======
+import { PostService } from '../post.service';
+>>>>>>> parent of a499e20 (Merge branch 'main' into pagination-Siwani)
 
 @Component({
   selector: 'app-matches',
@@ -13,9 +13,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MatchesComponent implements OnInit {
   
-  year:any;
   matches:any;
-
+<<<<<<< HEAD
+ 
+  constructor(private json: JsonService, private route:ActivatedRoute) { 
+    this.route.params.subscribe(params => this.year = params['year']);
+  }
+  ngOnInit(): void {
+    this.json. getMatchesByYear(this.year).subscribe(json => this.matches = json)
+=======
   PostService: any;
   constructor(private json: PostService) { }
 
@@ -48,14 +54,7 @@ export class MatchesComponent implements OnInit {
     this.tableSize = event.target.value;
     this.page = 1;
     this.fetchPosts();
-
- 
-  constructor(private json: JsonService, private route:ActivatedRoute) { 
-    this.route.params.subscribe(params => this.year = params['year']);
-  }
-  ngOnInit(): void {
-    this.json. getMatchesByYear(this.year).subscribe(json => this.matches = json)
-
+>>>>>>> parent of a499e20 (Merge branch 'main' into pagination-Siwani)
   }
 
 }

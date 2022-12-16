@@ -10,13 +10,10 @@ export class JsonService {
     // Haalt alle data op uit de query/link
     return this.http.get('https://k0497.azurewebsites.net/api/years/getallyears');
   }
-  getMatchesByYear(year:any){
-    return this.http.get('https://k0497.azurewebsites.net/api/matches/getallmatchesbyyear?year='+year+'&type=json');
+  getmatches(){
+    return this.http.get('https://k0497.azurewebsites.net/api/matches/getallmatches');
   }
-  getPlayersByID(matchid:any){
-    return this.http.get('https://k0497.azurewebsites.net/api/players/getallplayersbymatch?matchid='+matchid+'&type=json');
-  }
-  getFlag(country:any){
-    return this.http.get('https://countryflagsapi.com/svg/'+country);
+  getPlayers(){
+    return this.http.get('https://k0497.azurewebsites.net/api/players/getallplayers');
   }
 }

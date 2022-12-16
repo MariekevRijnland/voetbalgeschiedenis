@@ -1,11 +1,3 @@
-<h1>Welkom bij Voetbal info</h1>
-<p>Hier vind u informatie van alle matches van 1930 t/m 2014</p>
-
-<div class="foto">
-    <p>hier moet een foto komen, help</p>
-    <img src="/voetbalinfo/src/assets/geschiedenis-voetbal.jpg" alt="foto van voetbal geschiedenis">
-</div>
-
 <div class="container mt-5">
 <h1>Laatste match</h1>
 <table class="table table-striped">
@@ -20,14 +12,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{ jaar[19].year }}</td>
-            <td>{{ jaar[19].Country }}</td>
-            <td>{{ jaar[19].Winner }}</td>
-            <td>{{ jaar[19].Runners_Up }}</td>
-            <td>{{ jaar[19].Third }}</td>
-            <td>{{ jaar[19].Fourth }}</td>
-
+        <tr *ngFor="let jaar of jaren">
+            <td>{{ jaar.year }}</td>
+            <td>{{ jaar.Country }}</td>
+            <td>{{ jaar.Winner }}</td>
+            <td>{{ jaar.Runners_Up }}</td>
+            <td>{{ jaar.Third }}</td>
+            <td>{{ jaar.Fourth }}</td>
         </tr>
     </tbody>
 </table>
