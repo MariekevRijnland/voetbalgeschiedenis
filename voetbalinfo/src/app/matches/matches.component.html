@@ -11,7 +11,13 @@
                 <th style="background: rgb(186, 185, 189);" scope="col">Uit</th>
             </tr>
         </thead>
-        <tbody *ngFor="let match of matches">
+        <tbody *ngFor="let match of matches | paginate
+        : {
+            itemsPerPage: tableSize,
+            currentPage: page,
+            totalItems: count
+          };
+    let i = index">
             <tr>
                 <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
                     <a class="link" href="spelers/{{match.matchid}}">{{match.matchid}}</a>
@@ -31,4 +37,14 @@
             </tr>
         </tbody>
     </table>
+
+
+    <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"
+  >
+  </pagination-controls>
 </section>
+</section>
+
