@@ -45,7 +45,13 @@ $navTextColor: white;
     }
 }
 
+// footer {
+//     grid-area: footer;
+//     background-color: $colorNavFoot;
+// }
+html {
+    height: 500px;
+}
 footer {
-    grid-area: footer;
-    background-color: $colorNavFoot;
+    background-color: green;
 }

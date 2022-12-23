@@ -13,6 +13,7 @@ import { MatchesComponent } from './matches/matches.component';
 import { NavigatieComponent } from './navigatie/navigatie.component';
 import { JarenComponent } from './jaren/jaren.component';
 import { HttpClient } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { HttpClient } from '@angular/common/http';
     SpelersComponent,
     MatchesComponent,
     NavigatieComponent,
-    JarenComponent
+    JarenComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

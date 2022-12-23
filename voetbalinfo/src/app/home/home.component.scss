@@ -1,12 +1,28 @@
-h1, p {
-    padding: 15px;
-    padding-left: 23px;
+.intro {
+    text-align: center;
+    h1, p {
+        padding: 15px;
+        padding-left: 23px;
+    }
+    .foto {
+        width: 500px;
+    }
 }
 
-.foto {
-    background-color: green;
-    color: white;
+.laatste-match {
+    padding: 25px;
+    text-align: center;
+    .table {
+        left: 160px;
+        position: relative;
+        td {
+            padding: 20px;
+        }
+    }
 }
-td {
-    padding: 20px;
+.zoeken {
+    text-align: center;
+    b {
+        font-weight: bold;
+    }
 }
