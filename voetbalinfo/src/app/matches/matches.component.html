@@ -4,38 +4,31 @@
     <table class="table">
         <thead class="matches-kopjes">
             <tr>
+                <th style="background: rgb(186, 185, 189);" scope="col">Match</th>
                 <th style="background: rgb(186, 185, 189);" scope="col">Jaar</th>
                 <th style="background: rgb(186, 185, 189);" scope="col">Plaats</th>
-                <th style="background: rgb(186, 185, 189);" scope="col">Home Team</th>
-                <th style="background: rgb(186, 185, 189);" scope="col">Away Team</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Thuis</th>
+                <th style="background: rgb(186, 185, 189);" scope="col">Uit</th>
             </tr>
         </thead>
         <tbody *ngFor="let match of matches">
             <tr>
-                <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
-                    <a class="link" href="">{{match.year}}</a>
-                </th>
                 <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
-                    <a class="link" href="">{{match.City}}</a>
+                    <a class="link" href="spelers/{{match.matchid}}">{{match.matchid}}</a>
                 </th>
                 <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
-                    <a class="link" href="">{{match.Home_Team_Name}}</a>
+                    <a class="link" >{{match.year}}</a>
                 </th>
                 <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
-                    <a class="link" href="">{{match.Away_Team_Name}}</a>
+                    <a class="link" >{{match.City}}</a>
+                </th>
+                <th style="background: rgba(201, 201, 201, 0.467);" scope="row">
+                    <a class="link" >{{match.Home_Team_Name}}</a>
+                </th>
+                <th style="background: rgba(243, 241, 241, 0.931);" scope="row">
+                    <a class="link" >{{match.Away_Team_Name}}</a>
                 </th>
             </tr>
         </tbody>
     </table>
-<<<<<<< HEAD
 </section>
-=======
-
-    <pagination-controls
-    previousLabel="Prev"
-    nextLabel="Next"
-    (pageChange)="onTableDataChange($event)"
-  >
-  </pagination-controls>
-</section>
->>>>>>> parent of a499e20 (Merge branch 'main' into pagination-Siwani)

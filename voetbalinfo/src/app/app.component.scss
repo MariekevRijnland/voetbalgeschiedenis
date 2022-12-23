@@ -4,9 +4,15 @@ $navTextColor: white;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 8vh 17vh 17vh 17vh 17vh 17vh 7vh;
-    grid-template-areas: "logo navigatie navigatie navigatie navigatie navigatie" ". con con con con ." ". con con con con ." ". con con con con ." ". con con con con ." ". con con con con ." "footer footer footer footer footer footer";
+    grid-template-areas: 
+    "logo navigatie navigatie navigatie navigatie navigatie" 
+    ". con con con con ." 
+    ". con con con con ." 
+    ". con con con con ." 
+    ". con con con con ." 
+    ". con con con con ." 
+    "footer footer footer footer footer footer";
 }
-
 .navigatie {
     grid-area: navigatie;
     color: $navTextColor;
@@ -26,6 +32,8 @@ $navTextColor: white;
 .content {
     grid-area: con;
     background-color: azure;
+    height: fit-content;
+    padding-bottom: 50px;
 }
 
 .logo {
@@ -39,8 +47,5 @@ $navTextColor: white;
 
 footer {
     grid-area: footer;
-    display: flex;
     background-color: $colorNavFoot;
-    align-content: flex-end;
-    justify-content: end;
 }
