@@ -3,13 +3,9 @@ $navTextColor: white;
 .main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 8vh 17vh 17vh 17vh 17vh 17vh 7vh;
+    grid-template-rows: 8vh auto 7vh;
     grid-template-areas: 
     "logo navigatie navigatie navigatie navigatie navigatie" 
-    ". con con con con ." 
-    ". con con con con ." 
-    ". con con con con ." 
-    ". con con con con ." 
     ". con con con con ." 
     "footer footer footer footer footer footer";
 }
