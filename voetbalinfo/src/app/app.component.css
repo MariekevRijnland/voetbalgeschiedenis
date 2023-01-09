@@ -38,7 +38,12 @@
   width: 50px;
 }
 
-footer {
-  grid-area: footer;
+html {
+  height: 500px;
+}
+
+app-footer {
   background-color: #454545;
+  grid-area: footer;
+  display: flex;
 }

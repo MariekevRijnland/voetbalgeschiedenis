@@ -48,6 +48,8 @@ $navTextColor: white;
 html {
     height: 500px;
 }
-footer {
-    background-color: green;
+app-footer {
+    background-color: #454545;
+grid-area: footer;
+display: flex;
 }
